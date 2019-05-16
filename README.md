@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/localhostcnc/top-image-bar
+  - https://github.com/localhostcnc/reviewList-ak
+  - https://github.com/localhostcnc/calendar-component-kt
+  - https://github.com/localhostcnc/booking-info-service-jeff
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Usage
 
-> Some usage instructions
+> NPM start
 
 ## Requirements
 
