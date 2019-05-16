@@ -1,6 +1,6 @@
 {
   "name": "listinginfo",
-  "version": "",
+  "version": "1.0.0",
   "description": "Service for Airbnb FEC",
   "author": "Connor Homan",
   "license": "",
@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon /server.js"
+    "start": "nodemon server/server.js"
   },
   "dependencies": {
     "enzyme": "^3.9.0",
