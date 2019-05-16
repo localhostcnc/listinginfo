@@ -11,7 +11,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 app.use(express.static('client/'));
 
-app.get('/users', db.getUsers);
+app.get('/listing_info', db.getUsers);
 app.get('/', () => {
   console.log('Recieved GET request');
 });

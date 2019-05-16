@@ -8,9 +8,9 @@ const pool = new Pool({
 });
 
 const getUsers = (req, res) => {
-  pool.query('SELECT * FROM users', (err, results) => {
+  pool.query('SELECT * FROM listing_info', (err, results) => {
     if (err) {
-      console.log(err);
+      throw (err);
     } else {
       res.json(results.rows);
     }
