@@ -18,7 +18,7 @@ app.get('/', () => {
 
 app.listen(port, (err) => {
   if (err) {
-    console.log('Error:', err);
+    throw err;
   } else {
     console.log('Listening to Port:', port);
   }
