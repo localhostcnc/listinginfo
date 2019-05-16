@@ -1,5 +1,4 @@
 const Pool = require('pg').Pool;
-const port = 3007;
 
 const pool = new Pool({
   user: 'connorhoman',
@@ -17,6 +16,5 @@ const getUsers = (req, res) => {
     }
   });
 }
-
 
 module.exports = {getUsers};

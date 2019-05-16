@@ -2,7 +2,7 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const app = express();
 const port = 3006;
-const db = require('./queries.js')
+const db = require('../database/queries.js/index.js')
 
 app.use(bodyparser());
 app.use(bodyparser.json())

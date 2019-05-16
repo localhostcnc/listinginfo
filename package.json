@@ -8,7 +8,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "createdb": "brew install postgresql && brew services start postgresql && createdb listing_info && psql listing_info",
+    "db": "psql listing_info"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
