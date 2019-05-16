@@ -1,4 +1,4 @@
-const Pool = require('pg').Pool;
+const { Pool } = require('pg').Pool;
 
 const pool = new Pool({
   user: 'connorhoman',
@@ -15,6 +15,7 @@ const getUsers = (req, res) => {
       res.json(results.rows);
     }
   });
-}
+};
 
-module.exports = {getUsers};
+
+module.exports = { getUsers };

@@ -19,7 +19,7 @@
 
 > Server: NPM start
 > Database: 1) NPM run creatdb   OR     NPM run db (if already created)
-            2) \i /listinginfo/db_create.sql 
+            2) \i /listinginfo/database/db_create.sql 
             3) {Seed Database}
 
 
