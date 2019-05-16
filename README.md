@@ -18,7 +18,7 @@
 ## Usage
 
 > Server: NPM start
-> Database: 1) NPM run creatdb   OR     NPM run db (if already created)
+> Database: 1) NPM run createdb   OR     NPM run db (if already created)
             2) \i /listinginfo/database/db_create.sql 
             3) {Seed Database}
 
