@@ -1,4 +1,4 @@
-const { Pool } = require('pg').Pool;
+const { Pool } = require('pg');
 
 const pool = new Pool({
   user: 'connorhoman',
@@ -16,6 +16,5 @@ const getUsers = (req, res) => {
     }
   });
 };
-
 
 module.exports = { getUsers };
