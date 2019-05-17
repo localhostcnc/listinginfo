@@ -1,8 +1,8 @@
-# Project Name
+# localhostBnB
 
-> Project description
+> We are rebuilding an AirBnB listing page from scratch
 
-## Related Projects
+## Related Projects (other services)
 
   - https://github.com/localhostcnc/top-image-bar
   - https://github.com/localhostcnc/reviewList-ak
@@ -17,23 +17,25 @@
 
 ## Usage
 
-> Server: NPM start
+> Server: NPM start (nodemon)
 > Database: 1) brew install postgresql (Install postgres)
             2) brew services start postgresql (Start postgres)
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
             5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) {Seed Database} (Seed data into tables)
-
+            6) \q (To exit psql shell)
+            7) node database/seed.js (Seed database)
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-- etc
+- Postgresql 11.3
 
 ## Development
+
+
 
 ### Installing Dependencies
 

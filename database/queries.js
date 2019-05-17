@@ -7,7 +7,7 @@ const pool = new Pool({
   password: 'connorhoman',
 });
 
-const getUsers = (req, res) => {
+const getInfo = (req, res) => {
   pool.query('SELECT * FROM listing_info', (err, results) => {
     if (err) {
       throw (err);
@@ -17,4 +17,4 @@ const getUsers = (req, res) => {
   });
 };
 
-module.exports = { getUsers };
+module.exports = { getInfo };
