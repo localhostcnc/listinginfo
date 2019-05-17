@@ -23,7 +23,8 @@
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
             5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) In new terminal tab: node database/seed.js (Seed database)
+            6) \q (To exit psql shell)
+            7) node database/seed.js (Seed database)
 
 ## Requirements
 
