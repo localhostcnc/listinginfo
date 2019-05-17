@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyparser = require('body-parser');
+const db = require('../database/queries.js');
 
 const app = express();
 const port = 3006;
-const db = require('../database/queries.js');
 
 app.use(bodyparser());
 app.use(bodyparser.json());
