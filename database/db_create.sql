@@ -11,7 +11,6 @@ CREATE TABLE listing_info(
  baths INT NOT NULL,
  description TEXT NOT NULL,
  amenities TEXT NOT NULL,
- sleeping TEXT NOT NULL,
  rules TEXT  NOT NULL,
  cancellation TEXT NOT NULL,
  related1 TEXT NOT NULL,

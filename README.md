@@ -1,8 +1,8 @@
-# Project Name
+# localhostBnB
 
-> Project description
+> We are rebuilding an AirBnB listing page from scratch
 
-## Related Projects
+## Related Projects (other services)
 
   - https://github.com/localhostcnc/top-image-bar
   - https://github.com/localhostcnc/reviewList-ak
@@ -22,7 +22,8 @@
             2) brew services start postgresql (Start postgres)
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
-            5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create/Seed Table)
+            5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
+            6) (Seed Table)
 
 ## Requirements
 
