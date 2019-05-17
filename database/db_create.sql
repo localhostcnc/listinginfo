@@ -4,7 +4,7 @@ CREATE TABLE listing_info(
  city VARCHAR (50) NOT NULL,
  avatar VARCHAR (50) NOT NULL,
  owner VARCHAR (50)  NOT NULL,
- owner_type VARCHAR (50) NOT NULL,
+ ownerType VARCHAR (50) NOT NULL,
  guests INT NOT NULL,
  beds INT NOT NULL,
  rooms INT NOT NULL,
