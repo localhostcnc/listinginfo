@@ -22,9 +22,7 @@
             2) brew services start postgresql (Start postgres)
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
-            5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) {Seed Database} (Seed data into tables)
-
+            5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create/Seed Table)
 
 ## Requirements
 
