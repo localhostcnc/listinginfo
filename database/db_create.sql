@@ -19,5 +19,3 @@ CREATE TABLE listing_info(
  location TEXT NOT NULL,
  nearbyCities TEXT NOT NULL
  );
-
- 

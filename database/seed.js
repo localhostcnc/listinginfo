@@ -35,4 +35,3 @@ for (let i = 0; i < 100; i += 1) {
     }
   });
 }
-// ASYNC BROKE THIS
