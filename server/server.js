@@ -9,7 +9,7 @@ app.use(bodyparser());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
-app.use(express.static('client/'));
+app.use(express.static('public/'));
 
 app.get('/listing_info', db.getInfo);
 app.get('/', () => {
