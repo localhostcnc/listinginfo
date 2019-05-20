@@ -9,6 +9,7 @@ CREATE TABLE listing_info(
   beds INT NOT NULL,
   rooms INT NOT NULL,
   baths INT NOT NULL,
+  responseRate INT NOT NULL,
   description TEXT NOT NULL,
   amenities TEXT NOT NULL,
   rules TEXT NOT NULL,
