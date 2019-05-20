@@ -21,10 +21,11 @@ const names = ['Lake Almanor Lake Front Retreat',
   'The Cabin',
   'Take in a Dip in the Heated Pool at a Luxury SoCo Retreat'];
 const ownerTypes = ['Verified', 'none', 'Plus'];
+const cities = ['Barcelona', 'New York', 'Tokyo', 'Austin', 'Westwood', 'San Francisco', 'Oakland', 'San Diego', 'Honolulu', 'Punta Cana, Dominican Replubic'];
 
 for (let i = 0; i < 100; i += 1) {
   const name = names[Math.floor(Math.random() * names.length)];
-  const city = faker.address.city();
+  const city = cities[Math.floor(Math.random() * cities.length)];
   const avatar = faker.image.avatar();
   const owner = faker.name.firstName();
   const ownertype = ownerTypes[Math.floor(Math.random() * ownerTypes.length)];
@@ -41,7 +42,7 @@ for (let i = 0; i < 100; i += 1) {
   const related2 = faker.lorem.sentence();
   const related3 = faker.lorem.sentence();
   const location = `${faker.address.latitude()},${faker.address.longitude()}`;
-  const nearbycities = `${faker.address.city()},${faker.address.city()},${faker.address.city()},${faker.address.city()},${faker.address.city()}`;
+  const nearbycities = `${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]}`;
   const query = `INSERT INTO listing_info (name, city, avatar, owner, ownerType, guests, beds, rooms, baths, responseRate, description, amenities, rules, cancellation, related1, related2, related3, location, nearbyCities) VALUES ('${name}', '${city}', '${avatar}', '${owner}', '${ownertype}', ${guests}, ${beds}, ${rooms}, ${baths}, ${responserate}, '${description}', '${amenities}', '${rules}', '${cancellation}', '${related1}', '${related2}', '${related3}', '${location}', '${nearbycities}')`;
 
   pool.query(query, (err) => {
