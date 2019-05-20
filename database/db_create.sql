@@ -4,12 +4,12 @@ CREATE TABLE listing_info(
   city TEXT NOT NULL,
   avatar TEXT NOT NULL,
   owner TEXT NOT NULL,
-  ownerType TEXT NOT NULL,
+  ownertype TEXT NOT NULL,
   guests INT NOT NULL,
   beds INT NOT NULL,
   rooms INT NOT NULL,
   baths INT NOT NULL,
-  responseRate INT NOT NULL,
+  responserate INT NOT NULL,
   description TEXT NOT NULL,
   amenities TEXT NOT NULL,
   rules TEXT NOT NULL,
@@ -18,5 +18,5 @@ CREATE TABLE listing_info(
   related2 TEXT NOT NULL,
   related3 TEXT NOT NULL,
   location TEXT NOT NULL,
-  nearbyCities TEXT NOT NULL
+  nearbycities TEXT NOT NULL
  );
