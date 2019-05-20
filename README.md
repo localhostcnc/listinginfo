@@ -36,7 +36,10 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ## Development
 
-
+- React/Styled Components front-end
+- Express/PostgresQL back-end 
+- Jest/Enzyme/CircleCI testing
+- Webpack/ESLint compiling
 
 ### Installing Dependencies
 
