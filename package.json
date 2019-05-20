@@ -37,6 +37,7 @@
     "webpack-cli": "^3.3.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
@@ -54,9 +55,13 @@
     "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
     "pre-commit": "^1.2.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "superagent": "^5.0.5",
+    "supertest": "^4.0.2"
   },
   "jest": {
-    "setupFilesAfterEnv": ["./setuptest.js"]
+    "setupFilesAfterEnv": [
+      "./setuptest.js"
+    ]
   }
 }
