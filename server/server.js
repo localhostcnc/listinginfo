@@ -12,14 +12,9 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static('public/'));
 
 app.get('/listing_info', db.getInfo);
-app.get('/', () => {
-  console.log('Recieved GET request');
-});
 
 app.listen(port, (err) => {
   if (err) {
     throw err;
-  } else {
-    console.log('Listening to Port:', port);
   }
 });

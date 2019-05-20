@@ -28,7 +28,7 @@ for (let i = 0; i < 100; i += 1) {
   const location = faker.address.latitude();
   const nearbyCities = faker.lorem.word();
   const query = `INSERT INTO listing_info (name, city, avatar, owner, ownerType, guests, beds, rooms, baths, description, amenities, rules, cancellation, related1, related2, related3, location, nearbyCities) VALUES ('${name}', '${city}', '${avatar}', '${owner}', '${ownerType}', ${guests}, ${beds}, ${rooms}, ${baths}, '${description}', '${amenities}', '${rules}', '${cancellation}', '${related1}', '${related2}', '${related3}', '${location}', '${nearbyCities}')`;
-  console.log(query);
+
   pool.query(query, (err) => {
     if (err) {
       throw err;
