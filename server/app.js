@@ -3,9 +3,9 @@ const bodyparser = require('body-parser');
 const db = require('../database/queries.js');
 
 const app = express();
-app.use(bodyparser());
-app.use(bodyparser.json());
+
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json({ extended: true }));
 
 app.use(express.static('public/'));
 

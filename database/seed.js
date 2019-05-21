@@ -21,7 +21,9 @@ const names = ['Lake Almanor Lake Front Retreat',
   'The Cabin',
   'Take in a Dip in the Heated Pool at a Luxury SoCo Retreat'];
 const ownerTypes = ['Verified', 'none', 'Plus'];
-const cities = ['Barcelona', 'New York', 'Tokyo', 'Austin', 'Westwood', 'San Francisco', 'Oakland', 'San Diego', 'Honolulu', 'Punta Cana, Dominican Replubic'];
+const cities = ['Barcelona', 'New York', 'Tokyo',
+  'Austin', 'Westwood', 'San Francisco', 'Oakland',
+  'San Diego', 'Honolulu', 'Punta Cana, Dominican Replubic'];
 
 for (let i = 0; i < 100; i += 1) {
   const name = names[Math.floor(Math.random() * names.length)];
