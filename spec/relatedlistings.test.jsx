@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import RelatedListings from '../dist/Components/relatedlistings';
+import RelatedListings from '../dist/Components/relatedListings/index';
 
 describe('Components', () => {
   test('Rendering the Related Listings component', () => {

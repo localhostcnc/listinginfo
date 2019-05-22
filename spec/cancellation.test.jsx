@@ -2,12 +2,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LowerInfo from '../dist/Components/lowerInfo/index';
+import Cancellation from '../dist/Components/lowerInfo/cancellation';
 
 describe('Components', () => {
-  test('Rendering the Lower Info component', () => {
+  test('Rendering the Cancellation component', () => {
     const wrapper = shallow(
-      <LowerInfo />,
+      <Cancellation />,
     );
     expect(wrapper).toMatchSnapshot();
   });

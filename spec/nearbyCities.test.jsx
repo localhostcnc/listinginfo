@@ -2,12 +2,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LowerInfo from '../dist/Components/lowerInfo/index';
+import NearbyCities from '../dist/Components/relatedListings/nearbyCities';
 
 describe('Components', () => {
-  test('Rendering the Lower Info component', () => {
+  test('Rendering the Nearby Cities component', () => {
     const wrapper = shallow(
-      <LowerInfo />,
+      <NearbyCities />,
     );
     expect(wrapper).toMatchSnapshot();
   });
