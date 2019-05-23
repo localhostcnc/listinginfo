@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import UpperInfo from '../dist/Components/upperinfo';
+import UpperInfo from '../dist/Components/upperInfo/index';
 
 describe('Components', () => {
   test('Rendering the Upper Info component', () => {
