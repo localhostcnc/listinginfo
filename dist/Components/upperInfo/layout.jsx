@@ -3,6 +3,11 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHome);
 
 const Number = styled.span`
 
@@ -15,10 +20,11 @@ const Wrapper = styled.div`
   display: flex;
   padding-bottom: 15px;
 `;
-const Type = styled.div`
+const Type = styled.span`
   font-weight: 900;
   font-size: 15px;
   line-height: 25px;
+  padding-left: 5px;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -49,6 +55,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
+        <FontAwesomeIcon icon="home" />
         <Type>Entire house</Type>
         <Wrapper>
           <Number>{this.state.guests} guests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>

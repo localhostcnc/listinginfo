@@ -2,6 +2,11 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faAngleDown, faAngleUp);
 
 const Text = styled.p`
   padding-top: 9px;
@@ -12,7 +17,18 @@ const Text = styled.p`
 `;
 
 const Button = styled.div`
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+  color: #008489;
+  cursor: pointer;
+  &:hover{
+    text-decoration:underline;
+  }
+  padding-bottom:31px;
+`;
+const Contact = styled.div`
+  font-size: 15px;
   font-weight: 600;
   line-height: 22px;
   color: #008489;
@@ -20,6 +36,11 @@ const Button = styled.div`
   &:hover{
     text-decoration:underline;
   }
+  padding-bottom:16px;
+`;
+const ReadMore = styled.span`
+  padding-right: 10px;
+  font-weight: 600;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -55,8 +76,11 @@ class Description extends React.Component {
           <Text>{this.state.description}</Text>
           <Text>{this.state.description}</Text>
           <Text>{this.state.description}</Text>
-          <Button onClick={() => this.setState({ showMore: false })}>Hide</Button>
-          <Button>Contact Host</Button>
+          <Button onClick={() => this.setState({ showMore: false })}>
+            <ReadMore>Hide</ReadMore>
+            <FontAwesomeIcon icon="angle-up" />
+          </Button>
+          <Contact>Contact Host</Contact>
           <Line />
         </div>
       );
@@ -64,8 +88,11 @@ class Description extends React.Component {
     return (
       <div>
         <Text>{this.state.description}</Text>
-        <Button onClick={() => this.setState({ showMore: true })}>Read more about the space</Button>
-        <Button>Contact Host</Button>
+        <Button onClick={() => this.setState({ showMore: true })}>
+          <ReadMore>Read more about the space</ReadMore>
+          <FontAwesomeIcon icon="angle-down" />
+        </Button>
+        <Contact>Contact Host</Contact>
         <Line />
       </div>
     );
