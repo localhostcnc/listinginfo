@@ -17,9 +17,9 @@ class LowerInfo extends React.Component {
     return (
       <div>
         <OwnerInfo />
+        <Location />
         <Rules />
         <Cancellation />
-        <Location />
       </div>
     );
   }

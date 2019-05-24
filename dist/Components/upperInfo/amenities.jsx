@@ -20,6 +20,12 @@ const Header = styled.span`
   line-height: 22px;
   color: #484848;
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Amenities extends React.Component {
   constructor(props) {
@@ -48,6 +54,7 @@ class Amenities extends React.Component {
           <Header>Amenities</Header>
           <div>{this.state.amenities}</div>
           <Button>Show All Amenities Button</Button>
+          <Line />
         </div>
       );
     }
@@ -56,6 +63,7 @@ class Amenities extends React.Component {
         <Header>Amenities</Header>
         <div>{this.state.amenities}</div>
         <Button>Show All Amenities</Button>
+        <Line />
       </div>
     );
   }

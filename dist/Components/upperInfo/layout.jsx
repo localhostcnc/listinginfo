@@ -14,10 +14,16 @@ const Wrapper = styled.div`
   color: #484848;
 `;
 const Type = styled.div`
-   font-size: 16px;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 15px;
   line-height: 22px;
   color: #484848;
+`;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
 `;
 
 class Layout extends React.Component {
@@ -43,12 +49,13 @@ class Layout extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Type>Entire cabin</Type>
+          <Type>Entire house</Type>
           <Number>{this.state.rooms} bedrooms </Number>
           <Number>{this.state.beds} beds </Number>
           <Number>{this.state.baths} baths </Number>
           <Number>{this.state.guests} guests</Number>
         </Wrapper>
+        <Line />
       </div>
     );
   }

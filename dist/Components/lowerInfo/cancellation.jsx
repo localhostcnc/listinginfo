@@ -31,6 +31,12 @@ const Button = styled.div`
     text-decoration:underline;
   }
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Cancellation extends React.Component {
   constructor(props) {
@@ -61,6 +67,7 @@ class Cancellation extends React.Component {
           <Info>{this.state.cancellation}</Info>
           <Button>Get Full Details</Button>
           <Button>Hide policies</Button>
+          <Line />
         </div>
       );
     }
@@ -70,6 +77,7 @@ class Cancellation extends React.Component {
         <Headline>{this.state.cancellation}</Headline>
         <Info>{this.state.cancellation}</Info>
         <Button>Read More About this Policy</Button>
+        <Line />
       </div>
     );
   }

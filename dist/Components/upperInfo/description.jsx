@@ -20,6 +20,12 @@ const Button = styled.div`
     text-decoration:underline;
   }
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Description extends React.Component {
   constructor(props) {
@@ -46,16 +52,22 @@ class Description extends React.Component {
       return (
         <div>
           <Text>{this.state.description}</Text>
+          <Text>{this.state.description}</Text>
+          <Text>{this.state.description}</Text>
           <Button>Hide</Button>
           <Button>Contact Host</Button>
+          <Line />
         </div>
       );
     }
     return (
       <div>
         <Text>{this.state.description}</Text>
+        <Text>{this.state.description}</Text>
+        <Text>{this.state.description}</Text>
         <Button>Read more about the space</Button>
         <Button>Contact Host</Button>
+        <Line />
       </div>
     );
   }

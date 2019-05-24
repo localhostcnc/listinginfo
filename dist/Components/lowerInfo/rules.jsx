@@ -37,6 +37,12 @@ const Button = styled.div`
     text-decoration:underline;
   }
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Rules extends React.Component {
   constructor(props) {
@@ -62,21 +68,23 @@ class Rules extends React.Component {
     if (this.state.showMore) {
       return (
         <div>
-          <Title>Rules</Title>
+          <Title>Policies</Title>
           <Header>House Rules</Header>
           <Headline>{this.state.rules}</Headline>
           <Info>{this.state.rules}</Info>
           <Button>Hide policies</Button>
+          <Line />
         </div>
       );
     }
     return (
       <div>
-        <Title>Rules</Title>
+        <Title>Policies</Title>
         <Header>House Rules</Header>
         <Headline>{this.state.rules}</Headline>
         <Info>{this.state.rules}</Info>
         <Button>Read All Rules</Button>
+        <Line />
       </div>
     );
   }

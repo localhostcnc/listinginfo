@@ -19,6 +19,12 @@ const Header = styled.div`
   line-height: 22px;
   color: #484848;
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Arrangement extends React.Component {
   constructor(props) {
@@ -49,6 +55,7 @@ class Arrangement extends React.Component {
           <Number>{this.state.baths} baths </Number>
           <Number>{this.state.guests} guests</Number>
         </Wrapper>
+        <Line />
       </div>
     );
   }

@@ -9,8 +9,10 @@ import LowerInfo from './Components/lowerInfo/index.jsx';
 import RelatedListings from './Components/relatedListings/index.jsx';
 
 const Column = styled.div`
-  width: 40%;
-  font-family: sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+  width: 43%;
+  padding-left: 190px;
+  font-family: Quicksand, sans-serif;
 `;
 
 class ListingInfo extends React.Component {

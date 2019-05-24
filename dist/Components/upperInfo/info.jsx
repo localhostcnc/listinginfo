@@ -3,15 +3,16 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const Name = styled.div`
+const Name = styled.span`
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 550;
   line-height: 36px;
+  font-family: sans-serif;
   color: #484848;
 `;
 
 const City = styled.div`
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
@@ -20,15 +21,15 @@ const City = styled.div`
 const Avatar = styled.img`
   float: right;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 62px;
+  width: 62px;
 `;
 
-const Owner = styled.div`
+const Owner = styled.span`
   float: right;
-  font-size: 14x;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 20px;
   color: #767676;
 `;
 
@@ -55,8 +56,8 @@ class Info extends React.Component {
     return (
       <div>
         <Name>{this.state.name}</Name>
-        <City>{this.state.city}</City>
         <Avatar src={this.state.avatar} alt="avatar of owner" />
+        <City>{this.state.city}</City>
         <Owner>{this.state.owner}</Owner>
       </div>
     );

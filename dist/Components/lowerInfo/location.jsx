@@ -16,6 +16,12 @@ const Headline = styled.div`
   line-height: 22px;
   color: #484848;
 `;
+const Line = styled.hr`
+  color: lightgrey;
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+`;
 
 class Location extends React.Component {
   constructor(props) {
@@ -43,6 +49,7 @@ class Location extends React.Component {
         <Headline>{this.state.owner}&apos;s home is located in {this.state.city}</Headline>
         <div>{this.state.location}</div>
         <Headline>Exact location information is provided after a booking is confirmed.</Headline>
+        <Line />
       </div>
     );
   }
