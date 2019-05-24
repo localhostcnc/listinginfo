@@ -4,7 +4,8 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Text = styled.p`
-  font-size: 16px;
+  padding-top: 9px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
@@ -54,7 +55,7 @@ class Description extends React.Component {
           <Text>{this.state.description}</Text>
           <Text>{this.state.description}</Text>
           <Text>{this.state.description}</Text>
-          <Button>Hide</Button>
+          <Button onClick={() => this.setState({ showMore: false })}>Hide</Button>
           <Button>Contact Host</Button>
           <Line />
         </div>
@@ -63,9 +64,7 @@ class Description extends React.Component {
     return (
       <div>
         <Text>{this.state.description}</Text>
-        <Text>{this.state.description}</Text>
-        <Text>{this.state.description}</Text>
-        <Button>Read more about the space</Button>
+        <Button onClick={() => this.setState({ showMore: true })}>Read more about the space</Button>
         <Button>Contact Host</Button>
         <Line />
       </div>

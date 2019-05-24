@@ -6,11 +6,11 @@ import styled from 'styled-components';
 const Name = styled.div`
   font-size: 31px;
   font-weight: 550;
-  line-height: 38px;
+  line-height: 36px;
   font-family: sans-serif;
   color: #484848;
   width: 80%;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 `;
 
 const City = styled.div`
@@ -18,13 +18,17 @@ const City = styled.div`
   font-weight: 400;
   line-height: 22px;
   color: #484848;
+  cursor: pointer;
+  &:hover{
+    text-decoration:underline;
+  }
 `;
 
 const Avatar = styled.img`
   border-radius: 50%;
   height: 62px;
   width: 62px;
-  padding-bottom: 0px;
+  cursor: pointer;
 `;
 
 const Owner = styled.span`
@@ -34,13 +38,12 @@ const Owner = styled.span`
   color: #767676;
   display: block;
   text-align: center;
-  padding-top: 0px;
 `;
 const Wrapper = styled.div`
-  padding-right: 25px;
-  padding-top: 11px;
+  padding-left: 33px;
 `;
 const Box = styled.div`
+  padding-top: 16px;
   display: flex;
   padding-bottom: 12px;
 `;
@@ -68,10 +71,10 @@ class Info extends React.Component {
     return (
       <div>
         <Box>
-          <Wrapper>
+          <div>
             <Name>{this.state.name}</Name>
             <City>{this.state.city}</City>
-          </Wrapper>
+          </div>
           <Wrapper>
             <Avatar src={this.state.avatar} alt="avatar of owner" />
             <Owner>{this.state.owner}</Owner>

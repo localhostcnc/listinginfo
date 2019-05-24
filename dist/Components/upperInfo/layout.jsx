@@ -5,19 +5,20 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Number = styled.span`
-  color: dimgray;
+
 `;
 const Wrapper = styled.div`
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 22px;
   color: #484848;
   display: flex;
+  padding-bottom: 15px;
 `;
 const Type = styled.div`
   font-weight: 900;
   font-size: 15px;
-  line-height: 32px;
+  line-height: 25px;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -50,10 +51,10 @@ class Layout extends React.Component {
       <div>
         <Type>Entire house</Type>
         <Wrapper>
-          <Number>{this.state.rooms} bedrooms </Number>
-          <Number>{this.state.beds} beds </Number>
-          <Number>{this.state.baths} baths </Number>
-          <Number>{this.state.guests} guests</Number>
+          <Number>{this.state.guests} guests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.rooms} bedrooms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.beds} beds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.baths} baths</Number>
         </Wrapper>
         <Line />
       </div>

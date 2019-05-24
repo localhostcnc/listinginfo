@@ -49,7 +49,7 @@ class Arrangement extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Header>Sleeping Arrangment</Header>
+          <Header>Sleeping arrangments</Header>
           <Number>{this.state.rooms} bedrooms </Number>
           <Number>{this.state.beds} beds </Number>
           <Number>{this.state.baths} baths </Number>

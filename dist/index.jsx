@@ -10,8 +10,8 @@ import RelatedListings from './Components/relatedListings/index.jsx';
 
 const Column = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-  width: 43%;
-  padding-left: 190px;
+  width: 42%;
+  padding-left: 189px;
   font-family: Montserrat, sans-serif;
 `;
 const Page = styled.div`
