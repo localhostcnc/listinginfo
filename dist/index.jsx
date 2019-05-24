@@ -9,10 +9,17 @@ import LowerInfo from './Components/lowerInfo/index.jsx';
 import RelatedListings from './Components/relatedListings/index.jsx';
 
 const Column = styled.div`
-  width: 40%;
-  font-family: sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  width: 42%;
+  padding-left: 189px;
+  font-family: Montserrat, sans-serif;
 `;
-
+const Page = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  width: 53%;
+  padding-left: 188px;
+  font-family: Montserrat, sans-serif;
+`;
 class ListingInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -24,8 +31,10 @@ class ListingInfo extends React.Component {
         <Column>
           <UpperInfo />
           <LowerInfo />
-          <RelatedListings />
         </Column>
+        <Page>
+          <RelatedListings />
+        </Page>
       </div>
     );
   }

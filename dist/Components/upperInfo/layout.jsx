@@ -3,21 +3,34 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHome);
 
 const Number = styled.span`
-  color: dimgray;
+
 `;
 const Wrapper = styled.div`
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 22px;
   color: #484848;
+  display: flex;
+  padding-bottom: 15px;
 `;
-const Type = styled.div`
-   font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  color: #484848;
+const Type = styled.span`
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+  padding-left: 5px;
+`;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
 `;
 
 class Layout extends React.Component {
@@ -42,13 +55,15 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
+        <FontAwesomeIcon icon="home" />
+        <Type>Entire house</Type>
         <Wrapper>
-          <Type>Entire cabin</Type>
-          <Number>{this.state.rooms} bedrooms </Number>
-          <Number>{this.state.beds} beds </Number>
-          <Number>{this.state.baths} baths </Number>
-          <Number>{this.state.guests} guests</Number>
+          <Number>{this.state.guests} guests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.rooms} bedrooms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.beds} beds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
+          <Number>{this.state.baths} baths</Number>
         </Wrapper>
+        <Line />
       </div>
     );
   }

@@ -19,6 +19,12 @@ const Header = styled.div`
   line-height: 22px;
   color: #484848;
 `;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
+`;
 
 class Arrangement extends React.Component {
   constructor(props) {
@@ -43,12 +49,13 @@ class Arrangement extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Header>Sleeping Arrangment</Header>
+          <Header>Sleeping arrangments</Header>
           <Number>{this.state.rooms} bedrooms </Number>
           <Number>{this.state.beds} beds </Number>
           <Number>{this.state.baths} baths </Number>
           <Number>{this.state.guests} guests</Number>
         </Wrapper>
+        <Line />
       </div>
     );
   }

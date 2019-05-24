@@ -2,16 +2,33 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faAngleDown, faAngleUp);
 
 const Text = styled.p`
-  font-size: 16px;
+  padding-top: 9px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
 `;
 
 const Button = styled.div`
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+  color: #008489;
+  cursor: pointer;
+  &:hover{
+    text-decoration:underline;
+  }
+  padding-bottom:31px;
+`;
+const Contact = styled.div`
+  font-size: 15px;
   font-weight: 600;
   line-height: 22px;
   color: #008489;
@@ -19,6 +36,17 @@ const Button = styled.div`
   &:hover{
     text-decoration:underline;
   }
+  padding-bottom:16px;
+`;
+const ReadMore = styled.span`
+  padding-right: 10px;
+  font-weight: 600;
+`;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
 `;
 
 class Description extends React.Component {
@@ -46,16 +74,26 @@ class Description extends React.Component {
       return (
         <div>
           <Text>{this.state.description}</Text>
-          <Button>Hide</Button>
-          <Button>Contact Host</Button>
+          <Text>{this.state.description}</Text>
+          <Text>{this.state.description}</Text>
+          <Button onClick={() => this.setState({ showMore: false })}>
+            <ReadMore>Hide</ReadMore>
+            <FontAwesomeIcon icon="angle-up" />
+          </Button>
+          <Contact>Contact Host</Contact>
+          <Line />
         </div>
       );
     }
     return (
       <div>
         <Text>{this.state.description}</Text>
-        <Button>Read more about the space</Button>
-        <Button>Contact Host</Button>
+        <Button onClick={() => this.setState({ showMore: true })}>
+          <ReadMore>Read more about the space</ReadMore>
+          <FontAwesomeIcon icon="angle-down" />
+        </Button>
+        <Contact>Contact Host</Contact>
+        <Line />
       </div>
     );
   }

@@ -31,6 +31,12 @@ const Button = styled.div`
     text-decoration:underline;
   }
 `;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
+`;
 
 class Cancellation extends React.Component {
   constructor(props) {
@@ -44,10 +50,10 @@ class Cancellation extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          cancellation,
+          cancellation, description,
         } = res.data[0];
         this.setState({
-          cancellation,
+          cancellation, description,
         });
       });
   }
@@ -59,8 +65,10 @@ class Cancellation extends React.Component {
           <Header>Cancellations</Header>
           <Headline>{this.state.cancellation}</Headline>
           <Info>{this.state.cancellation}</Info>
-          <Button>Get Full Details</Button>
-          <Button>Hide policies</Button>
+          <Info>{this.state.description}</Info>
+          <Button>Get full details</Button>
+          <Button onClick={() => this.setState({ showMore: false })}>Hide policies</Button>
+          <Line />
         </div>
       );
     }
@@ -69,7 +77,10 @@ class Cancellation extends React.Component {
         <Header>Cancellations</Header>
         <Headline>{this.state.cancellation}</Headline>
         <Info>{this.state.cancellation}</Info>
-        <Button>Read More About this Policy</Button>
+        <Button onClick={() => this.setState({ showMore: true })}>
+          Read more about this policy
+        </Button>
+        <Line />
       </div>
     );
   }

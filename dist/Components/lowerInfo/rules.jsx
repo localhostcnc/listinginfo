@@ -37,6 +37,12 @@ const Button = styled.div`
     text-decoration:underline;
   }
 `;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
+`;
 
 class Rules extends React.Component {
   constructor(props) {
@@ -50,10 +56,10 @@ class Rules extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          rules,
+          rules, description,
         } = res.data[0];
         this.setState({
-          rules,
+          rules, description,
         });
       });
   }
@@ -62,21 +68,24 @@ class Rules extends React.Component {
     if (this.state.showMore) {
       return (
         <div>
-          <Title>Rules</Title>
+          <Title>Policies</Title>
           <Header>House Rules</Header>
           <Headline>{this.state.rules}</Headline>
           <Info>{this.state.rules}</Info>
-          <Button>Hide policies</Button>
+          <Info>{this.state.description}</Info>
+          <Button onClick={() => this.setState({ showMore: false })}>Hide rules</Button>
+          <Line />
         </div>
       );
     }
     return (
       <div>
-        <Title>Rules</Title>
+        <Title>Policies</Title>
         <Header>House Rules</Header>
         <Headline>{this.state.rules}</Headline>
         <Info>{this.state.rules}</Info>
-        <Button>Read All Rules</Button>
+        <Button onClick={() => this.setState({ showMore: true })}>Read all rules</Button>
+        <Line />
       </div>
     );
   }

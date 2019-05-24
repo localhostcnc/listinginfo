@@ -23,6 +23,7 @@ const Owner = styled.div`
 const Avatar = styled.img`
   border-radius: 50%;
   height: 64px;
+  float: right;
   width: 64px;
 `;
 const Headline = styled.div`
@@ -46,6 +47,12 @@ const Linkbutton = styled.span`
   &:hover{
     text-decoration:underline;
   }
+`;
+const Line = styled.hr`
+  color: #E6E4E4;
+  height: 1px;
+  background-color: #E6E4E4;
+  border-width: 0px;
 `;
 
 class OwnerInfo extends React.Component {
@@ -84,6 +91,7 @@ class OwnerInfo extends React.Component {
         </div>
         <Button>Contact Host</Button>
         <div>
+          <Line />
           <Headline>
             Always Communicate through Airbnb &#183;&nbsp;
           </Headline>
@@ -95,6 +103,7 @@ class OwnerInfo extends React.Component {
             Learn More
           </Linkbutton>
         </div>
+        <Line />
       </div>
     );
   }

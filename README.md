@@ -25,7 +25,7 @@
             4) psql listing_info (Use DB)
             5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
             6) \q (To exit psql shell)
-            7) NPM run seed
+            7) npm run seed
 
 ## Requirements
 

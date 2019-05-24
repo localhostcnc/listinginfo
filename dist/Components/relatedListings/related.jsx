@@ -24,9 +24,9 @@ class Related extends React.Component {
   render() {
     return (
       <div>
-        <div>{`${this.state.related1}`}</div>
-        <div>{`${this.state.related2}`}</div>
-        <div>{`${this.state.related3}`}</div>
+        <div>{this.state.related1}</div>
+        <div>{this.state.related2}</div>
+        <div>{this.state.related3}</div>
       </div>
     );
   }
