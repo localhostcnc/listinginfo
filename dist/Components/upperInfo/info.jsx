@@ -3,34 +3,46 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const Name = styled.span`
-  font-size: 32px;
+const Name = styled.div`
+  font-size: 31px;
   font-weight: 550;
-  line-height: 36px;
+  line-height: 38px;
   font-family: sans-serif;
   color: #484848;
+  width: 80%;
+  padding-bottom: 5px;
 `;
 
 const City = styled.div`
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
 `;
 
 const Avatar = styled.img`
-  float: right;
   border-radius: 50%;
   height: 62px;
   width: 62px;
+  padding-bottom: 0px;
 `;
 
 const Owner = styled.span`
-  float: right;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 13px;
   color: #767676;
+  display: block;
+  text-align: center;
+  padding-top: 0px;
+`;
+const Wrapper = styled.div`
+  padding-right: 25px;
+  padding-top: 11px;
+`;
+const Box = styled.div`
+  display: flex;
+  padding-bottom: 12px;
 `;
 
 class Info extends React.Component {
@@ -55,10 +67,16 @@ class Info extends React.Component {
   render() {
     return (
       <div>
-        <Name>{this.state.name}</Name>
-        <Avatar src={this.state.avatar} alt="avatar of owner" />
-        <City>{this.state.city}</City>
-        <Owner>{this.state.owner}</Owner>
+        <Box>
+          <Wrapper>
+            <Name>{this.state.name}</Name>
+            <City>{this.state.city}</City>
+          </Wrapper>
+          <Wrapper>
+            <Avatar src={this.state.avatar} alt="avatar of owner" />
+            <Owner>{this.state.owner}</Owner>
+          </Wrapper>
+        </Box>
       </div>
     );
   }

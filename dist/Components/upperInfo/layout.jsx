@@ -12,17 +12,17 @@ const Wrapper = styled.div`
   font-weight: 400;
   line-height: 22px;
   color: #484848;
+  display: flex;
 `;
 const Type = styled.div`
   font-weight: 900;
   font-size: 15px;
-  line-height: 22px;
-  color: #484848;
+  line-height: 32px;
 `;
 const Line = styled.hr`
-  color: lightgrey;
+  color: #E6E4E4;
   height: 1px;
-  background-color: lightgrey;
+  background-color: #E6E4E4;
   border-width: 0px;
 `;
 
@@ -48,8 +48,8 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
+        <Type>Entire house</Type>
         <Wrapper>
-          <Type>Entire house</Type>
           <Number>{this.state.rooms} bedrooms </Number>
           <Number>{this.state.beds} beds </Number>
           <Number>{this.state.baths} baths </Number>

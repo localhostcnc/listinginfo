@@ -21,9 +21,9 @@ const Header = styled.span`
   color: #484848;
 `;
 const Line = styled.hr`
-  color: lightgrey;
+  color: #E6E4E4;
   height: 1px;
-  background-color: lightgrey;
+  background-color: #E6E4E4;
   border-width: 0px;
 `;
 
