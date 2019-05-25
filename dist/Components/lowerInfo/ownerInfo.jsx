@@ -31,21 +31,23 @@ const Owner = styled.div`
 `;
 const Avatar = styled.img`
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
-  float: right;
-  padding-top: 30px;
-  padding-right: 20px;
+  height: 60px;
+  width: 60px;
 `;
-const Headline = styled.div`
-  font-size: 15px;
+const Floater = styled.div`
+  padding-top: 19px;
+  padding-right: 10px;
+  float: right;
+`;
+const Headline = styled.span`
+  font-size: 17px;
   font-family: sans-serif;
   font-weight: 500;
   line-height: 22px;
   color: #484848;
 `;
 const Text = styled.div`
-  font-size: 14.5px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 24px;
   color: #484848;
@@ -80,7 +82,7 @@ const Bold = styled.span`
   color: #484848;
 `;
 const Linkbutton = styled.span`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
   line-height: 22px;
@@ -129,7 +131,9 @@ class OwnerInfo extends React.Component {
   render() {
     return (
       <div>
-        <Avatar src={this.state.avatar} alt="avatar of owner" />
+        <Floater>
+          <Avatar src={this.state.avatar} alt="avatar of owner" />
+        </Floater>
         <Owner>Hosted by {this.state.owner}</Owner>
         <Text>Joined in January 2019</Text>
         <FontAwesomeIcon icon="check-circle" />
