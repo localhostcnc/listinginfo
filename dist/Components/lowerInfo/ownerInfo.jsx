@@ -32,7 +32,6 @@ const Owner = styled.div`
 const Avatar = styled.img`
   border-radius: 50%;
   height: 48px;
-  float: right;
   width: 48px;
   float: right;
   padding-top: 30px;
