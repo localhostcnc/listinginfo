@@ -4,9 +4,9 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faAngleDown, faAngleUp);
+library.add(faChevronDown, faChevronUp);
 
 const Text = styled.p`
   padding-top: 9px;
@@ -26,10 +26,11 @@ const Button = styled.div`
     text-decoration:underline;
   }
   padding-bottom:31px;
+  padding-top:14px;
 `;
 const Contact = styled.div`
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 22px;
   color: #008489;
   cursor: pointer;
@@ -40,7 +41,7 @@ const Contact = styled.div`
 `;
 const ReadMore = styled.span`
   padding-right: 10px;
-  font-weight: 600;
+  font-weight: 900;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -78,7 +79,7 @@ class Description extends React.Component {
           <Text>{this.state.description}</Text>
           <Button onClick={() => this.setState({ showMore: false })}>
             <ReadMore>Hide</ReadMore>
-            <FontAwesomeIcon icon="angle-up" />
+            <FontAwesomeIcon icon="chevron-up" />
           </Button>
           <Contact>Contact Host</Contact>
           <Line />
@@ -90,7 +91,7 @@ class Description extends React.Component {
         <Text>{this.state.description}</Text>
         <Button onClick={() => this.setState({ showMore: true })}>
           <ReadMore>Read more about the space</ReadMore>
-          <FontAwesomeIcon icon="angle-down" />
+          <FontAwesomeIcon icon="chevron-down" />
         </Button>
         <Contact>Contact Host</Contact>
         <Line />
