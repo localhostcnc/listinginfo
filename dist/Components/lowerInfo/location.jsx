@@ -15,14 +15,14 @@ const Header = styled.div`
   padding-top: 37px;
   padding-bottom: 17px;
 `;
-const Headline = styled.div`
+const Text = styled.div`
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
 `;
 const Upper = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 `;
 const Lower = styled.div`
   padding-top: 7px;
@@ -60,11 +60,11 @@ class Location extends React.Component {
       <div>
         <Header>The neighborhood</Header>
         <Upper>
-          <Headline>{this.state.owner}&apos;s home is located in {this.state.city}.</Headline>
+          <Text>{this.state.owner}&apos;s home is located in {this.state.city}.</Text>
         </Upper>
         <iframe title="map" width="595" height="350" frameBorder="0" src={src} />
         <Lower>
-          <Headline>Exact location information is provided after a booking is confirmed.</Headline>
+          <Text>Exact location information is provided after a booking is confirmed.</Text>
         </Lower>
         <Line />
       </div>

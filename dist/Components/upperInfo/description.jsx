@@ -15,7 +15,6 @@ const Text = styled.p`
   line-height: 22px;
   color: #484848;
 `;
-
 const Button = styled.div`
   font-size: 15px;
   font-weight: 900;

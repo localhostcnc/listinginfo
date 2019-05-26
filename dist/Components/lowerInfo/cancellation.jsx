@@ -25,8 +25,8 @@ const Info = styled.div`
   padding-top: 5px;
 `;
 const Button = styled.div`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 22px;
   color: #008489;
   cursor: pointer;
@@ -35,6 +35,9 @@ const Button = styled.div`
   }
   padding-top: 20px;
 `;
+const Icon = styled.span`
+  padding-left: 10px;
+`;
 const Line = styled.hr`
   color: #E6E4E4;
   height: 1px;
@@ -42,10 +45,6 @@ const Line = styled.hr`
   border-width: 0px;
   margin-top: 30px;
 `;
-const Icon = styled.span`
-  padding-left: 10px;
-`;
-
 
 class Cancellation extends React.Component {
   constructor(props) {
@@ -59,10 +58,10 @@ class Cancellation extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          cancellation, description,
+          description,
         } = res.data[0];
         this.setState({
-          cancellation, description,
+          description,
         });
       });
   }
@@ -72,12 +71,10 @@ class Cancellation extends React.Component {
       return (
         <div>
           <Header>Cancellation</Header>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{`${this.state.description}`.slice(0, 250)}</Info>
+          <Info>{`${this.state.description}`.slice(0, 550)}</Info>
+          <Button>Get full details</Button>
           <Button onClick={() => this.setState({ showMore: false })}>
-            Hide rules
+            Hide policies
             <Icon>
               <FontAwesomeIcon icon="chevron-up" />
             </Icon>
@@ -89,11 +86,9 @@ class Cancellation extends React.Component {
     return (
       <div>
         <Header>Cancellation</Header>
-        <Info>{this.state.cancellation}</Info>
-        <Info>{this.state.cancellation}</Info>
-        <Info>{this.state.cancellation}</Info>
+        <Info>{`${this.state.description}`.slice(0, 250)}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
-          Read all rules
+          Read more about the policy
           <Icon>
             <FontAwesomeIcon icon="chevron-down" />
           </Icon>

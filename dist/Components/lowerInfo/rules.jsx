@@ -34,8 +34,8 @@ const Title = styled.div`
   padding-bottom: 7px;
 `;
 const Button = styled.div`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 22px;
   color: #008489;
   cursor: pointer;
@@ -44,15 +44,16 @@ const Button = styled.div`
   }
   padding-top: 20px;
 `;
+const Icon = styled.span`
+  padding-left: 10px;
+`;
+
 const Line = styled.hr`
   color: #E6E4E4;
   height: 1px;
   background-color: #E6E4E4;
   border-width: 0px;
   margin-top: 30px;
-`;
-const Icon = styled.span`
-  padding-left: 10px;
 `;
 
 class Rules extends React.Component {
@@ -67,10 +68,10 @@ class Rules extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          rules, description,
+          description,
         } = res.data[0];
         this.setState({
-          rules, description,
+          description,
         });
       });
   }
@@ -81,10 +82,7 @@ class Rules extends React.Component {
         <div>
           <Title>Policies</Title>
           <Header>House Rules</Header>
-          <Info>{this.state.rules}</Info>
-          <Info>{this.state.rules}</Info>
-          <Info>{this.state.rules}</Info>
-          <Info>{`${this.state.description}`.slice(0, 250)}</Info>
+          <Info>{`${this.state.description}`.slice(0, 550)}</Info>
           <Button onClick={() => this.setState({ showMore: false })}>
             Hide rules
             <Icon>
@@ -99,9 +97,7 @@ class Rules extends React.Component {
       <div>
         <Title>Policies</Title>
         <Header>House Rules</Header>
-        <Info>{this.state.rules}</Info>
-        <Info>{this.state.rules}</Info>
-        <Info>{this.state.rules}</Info>
+        <Info>{`${this.state.description}`.slice(0, 250)}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
           Read all rules
           <Icon>

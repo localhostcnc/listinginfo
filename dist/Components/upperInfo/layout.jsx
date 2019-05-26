@@ -9,9 +9,6 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faHome);
 
-const Number = styled.span`
-
-`;
 const Wrapper = styled.div`
   font-size: 15px;
   font-weight: 200;
@@ -58,10 +55,10 @@ class Layout extends React.Component {
         <FontAwesomeIcon icon="home" />
         <Type>Entire house</Type>
         <Wrapper>
-          <Number>{this.state.guests} guests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
-          <Number>{this.state.rooms} bedrooms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
-          <Number>{this.state.beds} beds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Number>
-          <Number>{this.state.baths} baths</Number>
+          <span>{this.state.guests} guests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>{this.state.rooms} bedrooms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>{this.state.beds} beds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>{this.state.baths} baths</span>
         </Wrapper>
         <Line />
       </div>

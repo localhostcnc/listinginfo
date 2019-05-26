@@ -12,7 +12,6 @@ const Name = styled.div`
   width: 80%;
   padding-bottom: 7px;
 `;
-
 const City = styled.div`
   font-size: 16px;
   font-weight: 400;
@@ -23,14 +22,12 @@ const City = styled.div`
     text-decoration:underline;
   }
 `;
-
 const Avatar = styled.img`
   border-radius: 50%;
   height: 62px;
   width: 62px;
   cursor: pointer;
 `;
-
 const Owner = styled.span`
   font-size: 13.5px;
   font-weight: 300;
