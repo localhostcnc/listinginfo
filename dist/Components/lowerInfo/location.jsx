@@ -1,8 +1,10 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import key from './api.jsx';
 
 const Header = styled.div`
   font-size: 24.5px;
@@ -44,22 +46,23 @@ class Location extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          location, owner, city,
+          owner, city,
         } = res.data[0];
         this.setState({
-          location, owner, city,
+          owner, city,
         });
       });
   }
 
   render() {
+    const src = `https://www.google.com/maps/embed/v1/search?key=${key}=${this.state.city}`;
     return (
       <div>
         <Header>The neighborhood</Header>
         <Upper>
           <Headline>{this.state.owner}&apos;s home is located in {this.state.city}.</Headline>
         </Upper>
-        <div>{this.state.location}</div>
+        <iframe title="map" width="595" height="350" frameBorder="0" src={src} />
         <Lower>
           <Headline>Exact location information is provided after a booking is confirmed.</Headline>
         </Lower>
