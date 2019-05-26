@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import UpperInfo from './Components/upperInfo/index.jsx';
 import LowerInfo from './Components/lowerInfo/index.jsx';
-import RelatedListings from './Components/relatedListings/index.jsx';
 
 const Column = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -32,9 +31,7 @@ class ListingInfo extends React.Component {
           <UpperInfo />
           <LowerInfo />
         </Column>
-        <Page>
-          <RelatedListings />
-        </Page>
+        <Page />
       </div>
     );
   }

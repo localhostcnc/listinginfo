@@ -93,7 +93,7 @@ class Description extends React.Component {
           <ReadMore>Read more about the space</ReadMore>
           <FontAwesomeIcon icon="chevron-down" />
         </Button>
-        <Contact>Contact Host</Contact>
+        <Contact>Contact host</Contact>
         <Line />
       </div>
     );

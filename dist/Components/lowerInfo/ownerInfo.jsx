@@ -147,7 +147,7 @@ class OwnerInfo extends React.Component {
           <Bold>within a few hours</Bold>
         </Inner>
         <Wrapper>
-          <Button>Contact Host</Button>
+          <Button>Contact host</Button>
         </Wrapper>
         <div>
           <Line />
