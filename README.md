@@ -17,8 +17,8 @@
 
 ## Usage
 
-> Server: NPM start (nodemon)
-> Webpack: NPM run webpack
+> Server: npm start (nodemon)
+> Webpack: npm run webpack
 > Database: 1) brew install postgresql (Install postgres)
             2) brew services start postgresql (Start postgres)
             3) createdb listing_info (Create DB)

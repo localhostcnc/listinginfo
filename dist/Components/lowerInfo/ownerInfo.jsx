@@ -21,8 +21,8 @@ const Button = styled.button`
   padding: 6px 15px;
 `;
 const Owner = styled.div`
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 24.5px;
+  font-weight: 600;
   line-height: 24px;
   font-family: sans-serif;
   color: #484f4f;
@@ -75,10 +75,9 @@ const Response = styled.span`
   color: #484848;
 `;
 const Bold = styled.span`
-  font-size: 14.5px;
-  font-weight: 500;
-  font-family: sans-serif;
-  line-height: 15px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
   color: #484848;
 `;
 const Linkbutton = styled.span`

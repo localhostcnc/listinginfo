@@ -10,8 +10,8 @@ const Header = styled.div`
   line-height: 24px;
   font-family: sans-serif;
   color: #484f4f;
-  padding-top: 40px;
-  padding-bottom: 15px;
+  padding-top: 37px;
+  padding-bottom: 17px;
 `;
 const Headline = styled.div`
   font-size: 15px;
