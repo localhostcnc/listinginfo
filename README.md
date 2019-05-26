@@ -17,15 +17,14 @@
 
 ## Usage
 
-> Server: NPM start (nodemon)
-> Webpack: NPM run webpack
+> Server: npm start (nodemon)
+> Webpack: npm run webpack
 > Database: 1) brew install postgresql (Install postgres)
             2) brew services start postgresql (Start postgres)
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
             5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) \q (To exit psql shell)
-            7) npm run seed
+            6) npm run seed
 
 ## Requirements
 

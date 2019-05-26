@@ -5,16 +5,26 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Header = styled.div`
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 30px;
-  color: #484848;
+  font-size: 24.5px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: sans-serif;
+  color: #484f4f;
+  padding-top: 37px;
+  padding-bottom: 17px;
 `;
 const Headline = styled.div`
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   color: #484848;
+`;
+const Upper = styled.div`
+  padding-bottom: 10px;
+`;
+const Lower = styled.div`
+  padding-top: 7px;
+  padding-bottom: 13px;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -46,9 +56,13 @@ class Location extends React.Component {
     return (
       <div>
         <Header>The neighborhood</Header>
-        <Headline>{this.state.owner}&apos;s home is located in {this.state.city}</Headline>
+        <Upper>
+          <Headline>{this.state.owner}&apos;s home is located in {this.state.city}.</Headline>
+        </Upper>
         <div>{this.state.location}</div>
-        <Headline>Exact location information is provided after a booking is confirmed.</Headline>
+        <Lower>
+          <Headline>Exact location information is provided after a booking is confirmed.</Headline>
+        </Lower>
         <Line />
       </div>
     );
