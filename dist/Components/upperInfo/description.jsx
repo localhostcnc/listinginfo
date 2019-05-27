@@ -61,10 +61,10 @@ class Description extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          description,
+          description1, description2, description3,
         } = res.data[0];
         this.setState({
-          description,
+          description1, description2, description3,
         });
       });
   }
@@ -73,21 +73,21 @@ class Description extends React.Component {
     if (this.state.showMore) {
       return (
         <div>
-          <Text>{this.state.description}</Text>
-          <Text>{this.state.description}</Text>
-          <Text>{this.state.description}</Text>
+          <Text>{this.state.description1}</Text>
+          <Text>{this.state.description2}</Text>
+          <Text>{this.state.description3}</Text>
           <Button onClick={() => this.setState({ showMore: false })}>
             <ReadMore>Hide</ReadMore>
             <FontAwesomeIcon icon="chevron-up" />
           </Button>
-          <Contact>Contact Host</Contact>
+          <Contact>Contact host</Contact>
           <Line />
         </div>
       );
     }
     return (
       <div>
-        <Text>{this.state.description}</Text>
+        <Text>{this.state.description1}</Text>
         <Button onClick={() => this.setState({ showMore: true })}>
           <ReadMore>Read more about the space</ReadMore>
           <FontAwesomeIcon icon="chevron-down" />

@@ -64,10 +64,10 @@ class Cancellation extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          description,
+          cancellation1, cancellation2, cancellation3, cancellation4,
         } = res.data[0];
         this.setState({
-          description,
+          cancellation1, cancellation2, cancellation3, cancellation4,
         });
       });
   }
@@ -77,8 +77,10 @@ class Cancellation extends React.Component {
       return (
         <div>
           <Header>Cancellation</Header>
-          <Headline>Moderate - Free cancellation for 48 hours</Headline>
-          <Info>{`${this.state.description}`.slice(0, 550)}</Info>
+          <Headline>{this.state.cancellation1}</Headline>
+          <Info>{this.state.cancellation2}</Info>
+          <Info>{this.state.cancellation3}</Info>
+          <Info>{this.state.cancellation4}</Info>
           <Button>Get full details</Button>
           <Button onClick={() => this.setState({ showMore: false })}>
             Hide policies
@@ -93,8 +95,8 @@ class Cancellation extends React.Component {
     return (
       <div>
         <Header>Cancellation</Header>
-        <Headline>Moderate - Free cancellation for 48 hours</Headline>
-        <Info>{`${this.state.description}`.slice(0, 75)}</Info>
+        <Headline>{this.state.cancellation1}</Headline>
+        <Info>{this.state.cancellation2}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
           Read more about the policy
           <Icon>

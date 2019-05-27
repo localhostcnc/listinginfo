@@ -61,6 +61,29 @@ const Icon = styled.div`
 const Icons = styled.div`
   display: flex;
 `;
+const Text = styled.div`
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #484848;
+  padding-right: 100px;
+  padding-bottom: 17px;
+  overflow-wrap: break-word;
+`;
+const Button = styled.div`
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+  color: #008489;
+  cursor: pointer;
+  &:hover{
+    text-decoration:underline;
+  }
+  padding-bottom: 18px;
+`;
+const Box = styled.div`
+  display: flex;
+`;
 
 class Arrangement extends React.Component {
   constructor(props) {
@@ -75,7 +98,6 @@ class Arrangement extends React.Component {
         const {
           bedtype1, bedtype2, bedtype3, bedtype4,
         } = res.data[0];
-        console.log(res.data[0]);
         this.setState({
           bedtype1, bedtype2, bedtype3, bedtype4,
         });
@@ -114,6 +136,13 @@ class Arrangement extends React.Component {
             <Lower>1 {this.state.bedtype3} and 1 {this.state.bedtype4}</Lower>
           </LowerSquare>
         </Wrapper>
+        <Line />
+        <Header>Accessibility</Header>
+        <Box>
+          <Text>Step-free access to bedroom</Text>
+          <Text>Extra space around bed</Text>
+        </Box>
+        <Button>Show all</Button>
         <Line />
       </div>
     );

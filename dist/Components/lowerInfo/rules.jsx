@@ -68,10 +68,10 @@ class Rules extends React.Component {
     axios.get('http://localhost:3006/listing_info')
       .then((res) => {
         const {
-          description,
+          rules1, rules2, rules3, rules4,
         } = res.data[0];
         this.setState({
-          description,
+          rules1, rules2, rules3, rules4,
         });
       });
   }
@@ -82,10 +82,10 @@ class Rules extends React.Component {
         <div>
           <Title>Policies</Title>
           <Header>House Rules</Header>
-          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
-          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
-          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
-          <Info>{`${this.state.description}`.slice(0, 550)}</Info>
+          <Info>{this.state.rules1}</Info>
+          <Info>{this.state.rules2}</Info>
+          <Info>{this.state.rules3}</Info>
+          <Info>{this.state.rules4}</Info>
           <Button onClick={() => this.setState({ showMore: false })}>
             Hide rules
             <Icon>
@@ -100,9 +100,8 @@ class Rules extends React.Component {
       <div>
         <Title>Policies</Title>
         <Header>House Rules</Header>
-        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
-        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
-        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
+        <Info>{this.state.rules1}</Info>
+        <Info>{this.state.rules2}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
           Read all rules
           <Icon>

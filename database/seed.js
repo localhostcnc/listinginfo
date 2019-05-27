@@ -22,9 +22,13 @@ const names = ['Lake Almanor Lake Front Retreat',
   'The Cabin',
   'Take in a Dip in the Heated Pool at a Luxury SoCo Retreat'];
 const ownerTypes = ['Verified', 'none', 'Plus'];
+const responseTypes = ['weeks', 'hours', 'months'];
 const cities = ['Barcelona', 'New York', 'Tokyo',
   'Austin', 'Westwood', 'San Francisco', 'Oakland',
-  'San Diego', 'Honolulu', 'Punta Cana, Dominican Republic'];
+  'San Diego', 'Honolulu', 'Punta Cana, Dominican Republic',
+  'Miami', 'Buenos Aires', 'Lima', 'Dallas', 'Phoenix',
+  'Grand Rapids', 'Seattle', 'Portland', 'Boise', 'Madrid', 'Munich',
+  'Dublin', 'London'];
 const bedTypes = ['single', 'double', 'queen', 'king', 'sofa'];
 const descriptions = ['This is a quaint cabin tucked in the trees on the east shore of Lake Almanor. The warm, shallow water makes it perfect for little ones to play or hook up to a bouy to just float. Can hook a boat to the outter bouy as well. Beach is used only by neighbors so it’s quiet. There’s also a picnic table and fire pit for s’mores. Town of Chester is 10 minutes away with shops, dining, rentals, parks and soft swirl ice cream, a must! A couple hiking trails are out front door and across the street.  The spaceThe main living area is cozy and there’s a family size picnic table perfect for meals or family games. Two bedrooms off kitchen with full bath and laundry facilities. Upstairs is a loft with small library and a curtained off queen bed with half bath. Our deck is large and the perfect spot for a glass of wine or beer while you BBQ and watch the sunset over Mt. Lassen, we’re 100 feet from lakes edge. Once the sun goes down there’s string lights and a fire top table with comfortable chairs to enjoy the cool evening air. The kitchen is fully stocked with cooking utensils and plastic ware for kids. The house comfortably sleeps 6 but there’s a pull out couch for 2 more and space in the loft for an air mattress. You can also pitch a tent in front of the deck for more sleeping space. We also offer beach towels, chairs, loungers, umbrellas, two kayaks and a paddle boat for your enjoyment.Interaction with guests. We are available by phone to answer any questions but have the most fabulous neighbors who are extremely friendly and full of great information.',
   'Prime location with parking. Walking distance to UCLA. Minutes from Santa Monica, Venice, Hollywood and other tourist attractions. Full kitchen with appliances, A/C unit, and Wi-Fi.The spaceIf you are visiting Los Angeles and looking to be in a prime location within close proximity to the citys touristic attractions and famous beaches, my renovated studio in the heart of Westwood is the choice for you.My unit is on the third (top floor) of the building so there is a beautiful skyline view from the three large windows. These windows bring lots of bright natural light, but if you choose to cover them each window has a retractable shade. There is also a skylight in the kitchen and bathroom ceilings for more natural light.I have a queen sized bed (med-firm foam mattress) which sleeps two people comfortably. If you have a third guest, I can also provide an extra single sleeper bed upon request.There is a full kitchen complete with stainless steel appliances, dish ware and utensils if you would like to prepare your own meals.There is also a medium sized desk and wi-fi available for use if you need to get any work done during your stay.I have an in-unit AC/Heater, but you are welcome to open the windows if you wish.I provide one assigned parking space. The space may be tight for larger vehicles.The UCLA campus is 1.1 miles away- 6 to 7 minute car ride- 8 minute bike ride- 18 minute UCLA Blue Bus ride- 25 minute walkGuest accessGuests will be able to utilize the entire studio apartment privately.Interaction with guestsPlease feel free to shoot me a message prior.',
@@ -54,20 +58,27 @@ for (let i = 0; i < 100; i += 1) {
   const bedType3 = bedTypes[Math.floor(Math.random() * bedTypes.length)];
   const bedType4 = bedTypes[4];
   const responserate = Math.floor(Math.random() * 100);
-  const description = descriptions[Math.floor(Math.random() * descriptions.length)];
+  const responseType = responseTypes[Math.floor(Math.random() * responseTypes.length)];
+  const description1 = descriptions[Math.floor(Math.random() * descriptions.length)];
+  const description2 = descriptions[Math.floor(Math.random() * descriptions.length)];
+  const description3 = descriptions[Math.floor(Math.random() * descriptions.length)];
   const amenities = Math.floor(Math.random() * 40);
   // for (let j = 0; j < 15; j += 1) {
   //   amenities += amenitieslist[Math.floor(Math.random() * amenitieslist.length)];
   //   amenities += ' ';
   // }
-  const rules = faker.lorem.sentence();
-  const cancellation = faker.lorem.sentence();
-  const related1 = faker.lorem.sentence();
-  const related2 = faker.lorem.sentence();
-  const related3 = faker.lorem.sentence();
-  const location = `${faker.address.latitude()},${faker.address.longitude()}`;
-  const nearbycities = `${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]},${cities[Math.floor(Math.random() * cities.length)]}`;
-  const query = `INSERT INTO listing_info (name, city, avatar, owner, ownerType, guests, beds, rooms, baths, bedType1, bedType2, bedType3, bedType4, responseRate, description, amenities, rules, cancellation, related1, related2, related3, location, nearbyCities) VALUES ('${name}', '${city}', '${avatar}', '${owner}', '${ownertype}', ${guests}, ${beds}, ${rooms}, ${baths}, '${bedType1}', '${bedType2}', '${bedType3}', '${bedType4}', ${responserate}, '${description}', ${amenities}, '${rules}', '${cancellation}', '${related1}', '${related2}', '${related3}', '${location}', '${nearbycities}')`;
+  const location1 = faker.lorem.sentence();
+  const location2 = faker.lorem.sentence();
+  const location3 = faker.lorem.sentence();
+  const rules1 = faker.lorem.sentence();
+  const rules2 = faker.lorem.sentence();
+  const rules3 = faker.lorem.sentence();
+  const rules4 = faker.lorem.sentence();
+  const cancellation1 = faker.lorem.sentence();
+  const cancellation2 = faker.lorem.sentence();
+  const cancellation3 = faker.lorem.sentence();
+  const cancellation4 = faker.lorem.sentence();
+  const query = `INSERT INTO listing_info (name, city, avatar, owner, ownerType, guests, beds, rooms, baths, bedType1, bedType2, bedType3, bedType4, responseRate, responseType, description1, description2, description3, amenities, location1, location2, location3, rules1, rules2, rules3, rules4, cancellation1, cancellation2, cancellation3, cancellation4) VALUES ('${name}', '${city}', '${avatar}', '${owner}', '${ownertype}', ${guests}, ${beds}, ${rooms}, ${baths}, '${bedType1}', '${bedType2}', '${bedType3}', '${bedType4}', ${responserate}, '${responseType}', '${description1}', '${description2}', '${description3}', ${amenities}, '${location1}', '${location2}', '${location3}', '${rules1}', '${rules2}', '${rules3}', '${rules4}', '${cancellation1}', '${cancellation2}', '${cancellation3}', '${cancellation4}')`;
 
   pool.query(query, (err) => {
     if (err) {
