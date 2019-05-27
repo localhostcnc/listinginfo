@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -68,6 +69,19 @@ class Arrangement extends React.Component {
     };
   }
 
+  componentDidMount() {
+    axios.get('http://localhost:3006/listing_info')
+      .then((res) => {
+        const {
+          bedtype1, bedtype2, bedtype3, bedtype4,
+        } = res.data[0];
+        console.log(res.data[0]);
+        this.setState({
+          bedtype1, bedtype2, bedtype3, bedtype4,
+        });
+      });
+  }
+
   render() {
     return (
       <div>
@@ -78,14 +92,14 @@ class Arrangement extends React.Component {
               <FontAwesomeIcon icon="bed" />
             </Icon>
             <Upper>Bedroom 1</Upper>
-            <Lower>1 queen bed</Lower>
+            <Lower>1 {this.state.bedtype1} bed</Lower>
           </Square>
           <Square>
             <Icon>
               <FontAwesomeIcon icon="bed" />
             </Icon>
             <Upper>Bedroom 2</Upper>
-            <Lower>1 double bed</Lower>
+            <Lower>1 {this.state.bedtype2} bed</Lower>
           </Square>
           <LowerSquare>
             <Icons>
@@ -97,7 +111,7 @@ class Arrangement extends React.Component {
               </Icon>
             </Icons>
             <Upper>Common areas</Upper>
-            <Lower>1 twin and 1 sofa</Lower>
+            <Lower>1 {this.state.bedtype3} and 1 {this.state.bedtype4}</Lower>
           </LowerSquare>
         </Wrapper>
         <Line />

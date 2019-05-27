@@ -15,14 +15,14 @@ const Header = styled.div`
   line-height: 22px;
   color: #484848;
   padding-top: 14px;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 `;
 const Info = styled.div`
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
   color: #484848;
-  padding-top: 5px;
+  padding-top: 2px;
 `;
 const Button = styled.div`
   font-size: 15px;
@@ -37,6 +37,12 @@ const Button = styled.div`
 `;
 const Icon = styled.span`
   padding-left: 10px;
+`;
+const Headline = styled.div`
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #484848;
 `;
 const Line = styled.hr`
   color: #E6E4E4;
@@ -71,6 +77,7 @@ class Cancellation extends React.Component {
       return (
         <div>
           <Header>Cancellation</Header>
+          <Headline>Moderate - Free cancellation for 48 hours</Headline>
           <Info>{`${this.state.description}`.slice(0, 550)}</Info>
           <Button>Get full details</Button>
           <Button onClick={() => this.setState({ showMore: false })}>
@@ -86,7 +93,8 @@ class Cancellation extends React.Component {
     return (
       <div>
         <Header>Cancellation</Header>
-        <Info>{`${this.state.description}`.slice(0, 250)}</Info>
+        <Headline>Moderate - Free cancellation for 48 hours</Headline>
+        <Info>{`${this.state.description}`.slice(0, 75)}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
           Read more about the policy
           <Icon>

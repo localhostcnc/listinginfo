@@ -82,6 +82,9 @@ class Rules extends React.Component {
         <div>
           <Title>Policies</Title>
           <Header>House Rules</Header>
+          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
+          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
+          <Info>{`${this.state.description}`.slice(0, 35)}</Info>
           <Info>{`${this.state.description}`.slice(0, 550)}</Info>
           <Button onClick={() => this.setState({ showMore: false })}>
             Hide rules
@@ -97,7 +100,9 @@ class Rules extends React.Component {
       <div>
         <Title>Policies</Title>
         <Header>House Rules</Header>
-        <Info>{`${this.state.description}`.slice(0, 250)}</Info>
+        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
+        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
+        <Info>{`${this.state.description}`.slice(0, 35)}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
           Read all rules
           <Icon>

@@ -109,7 +109,7 @@ class Amenities extends React.Component {
           </Right>
         </Box>
         <Button>
-          Show all {Math.floor(`${this.state.amenities}`.length / 10)} amenities
+          Show all {this.state.amenities} amenities
         </Button>
         <Line />
       </div>
