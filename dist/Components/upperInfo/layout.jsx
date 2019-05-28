@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   line-height: 22px;
   color: #484848;
   display: flex;
-  padding-bottom: 15px;
+  padding-bottom: 7px;
   padding-left: 26px;
 `;
 const Inner = styled.div`
@@ -59,6 +59,9 @@ const Help = styled.span`
     color: #008489;
   }
 `;
+const Icon = styled.span`
+  padding-left: 5px;
+`;
 
 class Layout extends React.Component {
   constructor(props) {
@@ -97,7 +100,11 @@ class Layout extends React.Component {
           <MidType>Great location</MidType>
           <Inner>
             <div>90% of recent guests gave this location a 5-star rating.</div>
-            <Help>Helpful</Help> <FontAwesomeIcon icon="thumbs-up" />
+            <Help>Helpful
+              <Icon>
+                <FontAwesomeIcon icon="thumbs-up" />
+              </Icon>
+            </Help>
             <Help>  &#183; Not helpful</Help>
           </Inner>
         </div>
@@ -106,7 +113,12 @@ class Layout extends React.Component {
           <LowerType>Great check-in experience</LowerType>
           <Inner>
             <div>100% of recent guests gave the check-in process a 5-star rating</div>
-            <Help>Helpful</Help> <FontAwesomeIcon icon="thumbs-up" />
+            <Help>
+              Helpful
+              <Icon>
+                <FontAwesomeIcon icon="thumbs-up" />
+              </Icon>
+            </Help>
             <Help>  &#183; Not helpful</Help>
           </Inner>
           <Line />
