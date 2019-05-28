@@ -15,18 +15,18 @@ const Header = styled.div`
   line-height: 22px;
   color: #484848;
   padding-top: 14px;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 `;
 const Info = styled.div`
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
   color: #484848;
-  padding-top: 5px;
+  padding-top: 2px;
 `;
 const Button = styled.div`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 22px;
   color: #008489;
   cursor: pointer;
@@ -35,6 +35,15 @@ const Button = styled.div`
   }
   padding-top: 20px;
 `;
+const Icon = styled.span`
+  padding-left: 10px;
+`;
+const Headline = styled.div`
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #484848;
+`;
 const Line = styled.hr`
   color: #E6E4E4;
   height: 1px;
@@ -42,10 +51,6 @@ const Line = styled.hr`
   border-width: 0px;
   margin-top: 30px;
 `;
-const Icon = styled.span`
-  padding-left: 10px;
-`;
-
 
 class Cancellation extends React.Component {
   constructor(props) {
@@ -56,13 +61,13 @@ class Cancellation extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
-          cancellation, description,
+          cancellation1, cancellation2, cancellation3, cancellation4,
         } = res.data[0];
         this.setState({
-          cancellation, description,
+          cancellation1, cancellation2, cancellation3, cancellation4,
         });
       });
   }
@@ -72,12 +77,13 @@ class Cancellation extends React.Component {
       return (
         <div>
           <Header>Cancellation</Header>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{this.state.cancellation}</Info>
-          <Info>{`${this.state.description}`.slice(0, 250)}</Info>
+          <Headline>{this.state.cancellation1}</Headline>
+          <Info>{this.state.cancellation2}</Info>
+          <Info>{this.state.cancellation3}</Info>
+          <Info>{this.state.cancellation4}</Info>
+          <Button>Get full details</Button>
           <Button onClick={() => this.setState({ showMore: false })}>
-            Hide rules
+            Hide policies
             <Icon>
               <FontAwesomeIcon icon="chevron-up" />
             </Icon>
@@ -89,11 +95,10 @@ class Cancellation extends React.Component {
     return (
       <div>
         <Header>Cancellation</Header>
-        <Info>{this.state.cancellation}</Info>
-        <Info>{this.state.cancellation}</Info>
-        <Info>{this.state.cancellation}</Info>
+        <Headline>{this.state.cancellation1}</Headline>
+        <Info>{this.state.cancellation2}</Info>
         <Button onClick={() => this.setState({ showMore: true })}>
-          Read all rules
+          Read more about the policy
           <Icon>
             <FontAwesomeIcon icon="chevron-down" />
           </Icon>

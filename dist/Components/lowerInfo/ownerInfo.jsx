@@ -5,9 +5,9 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCheckCircle);
+library.add(faCheckCircle, faStar);
 
 const Button = styled.button`
   font-size: 14px;
@@ -107,7 +107,12 @@ const Wrapper = styled.div`
 const Inner = styled.div`
   padding-bottom: 8px;
 `;
-
+const Box = styled.div`
+  display: flex;
+`;
+const SmallInner = styled.div`
+  padding-right: 12px;
+`;
 class OwnerInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -116,7 +121,7 @@ class OwnerInfo extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
           owner, ownertype, responserate, avatar,
@@ -135,8 +140,16 @@ class OwnerInfo extends React.Component {
         </Floater>
         <Owner>Hosted by {this.state.owner}</Owner>
         <Text>Joined in January 2019</Text>
-        <FontAwesomeIcon icon="check-circle" />
-        <Type>{this.state.ownertype}</Type>
+        <Box>
+          <SmallInner>
+            <FontAwesomeIcon icon="star" />
+            <Type>319 reviews</Type>
+          </SmallInner>
+          <SmallInner>
+            <FontAwesomeIcon icon="check-circle" />
+            <Type>{this.state.ownertype}</Type>
+          </SmallInner>
+        </Box>
         <Bottom />
         <Inner>
           <Response>Response rate: </Response>

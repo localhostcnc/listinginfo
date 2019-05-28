@@ -9,10 +9,15 @@ app.use(bodyparser.json({ extended: true }));
 
 app.use(express.static('public/'));
 
-app.get('/listing_info', db.getInfo);
-
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World');
+app.get('/listing_info/:id', (req, res) => {
+  const { id } = req.params;
+  db.getInfo(id, (err, data) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(data);
+    }
+  });
 });
 
 module.exports = app;

@@ -13,12 +13,7 @@ const Column = styled.div`
   padding-left: 189px;
   font-family: Montserrat, sans-serif;
 `;
-const Page = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-  width: 53%;
-  padding-left: 188px;
-  font-family: Montserrat, sans-serif;
-`;
+
 class ListingInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +26,6 @@ class ListingInfo extends React.Component {
           <UpperInfo />
           <LowerInfo />
         </Column>
-        <Page />
       </div>
     );
   }
