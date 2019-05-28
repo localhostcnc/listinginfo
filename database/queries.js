@@ -11,7 +11,6 @@ const getInfo = (id, callback) => {
   pool.query(`SELECT * FROM listing_info WHERE listing_id = ${id}`, (err, results) => {
     if (err) {
       callback(err, null);
-      console.log(err, results);
     } else {
       callback(null, results.rows);
     }

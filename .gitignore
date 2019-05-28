@@ -1,6 +1,6 @@
 ## MAC files ##
 .DS_Store
-.dist/Components/lowerInfo/api.jsx
+dist/Components/lowerInfo/api.jsx
 
 ## NPM ##
 npm
@@ -23,4 +23,4 @@ coverage
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
-dist/
+

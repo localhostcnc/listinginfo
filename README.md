@@ -24,7 +24,9 @@
             3) createdb listing_info (Create DB)
             4) psql listing_info (Use DB)
             5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) npm run seed
+            6) (Change credentials in /database/seed.js & /database/seed.js to yours)
+            7) Get API key from Connor
+            7) npm run seed (Seeds DB)
 
 ## Requirements
 
