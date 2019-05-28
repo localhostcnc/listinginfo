@@ -61,7 +61,7 @@ class Cancellation extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
           cancellation1, cancellation2, cancellation3, cancellation4,

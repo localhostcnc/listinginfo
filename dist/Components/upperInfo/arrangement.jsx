@@ -93,7 +93,7 @@ class Arrangement extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
           bedtype1, bedtype2, bedtype3, bedtype4,

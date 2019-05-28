@@ -7,12 +7,13 @@ const pool = new Pool({
   password: 'connorhoman',
 });
 
-const getInfo = (req, res) => {
-  pool.query('SELECT * FROM listing_info', (err, results) => {
+const getInfo = (id, callback) => {
+  pool.query(`SELECT * FROM listing_info WHERE listing_id = ${id}`, (err, results) => {
     if (err) {
-      throw (err);
+      callback(err, null);
+      console.log(err, results);
     } else {
-      res.json(results.rows);
+      callback(null, results.rows);
     }
   });
 };

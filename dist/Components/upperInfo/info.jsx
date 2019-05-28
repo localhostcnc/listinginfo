@@ -53,7 +53,7 @@ class Info extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
           name, city, avatar, owner,

@@ -10,7 +10,7 @@ class Related extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3006/listing_info')
+    axios.get('http://localhost:3006/listing_info/1')
       .then((res) => {
         const {
           related1, related2, related3,
