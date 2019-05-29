@@ -4,10 +4,9 @@
 
 ## Related Projects (other services)
 
-  - https://github.com/localhostcnc/top-image-bar
-  - https://github.com/localhostcnc/reviewList-ak
-  - https://github.com/localhostcnc/calendar-component-kt
-  - https://github.com/localhostcnc/booking-info-service-jeff
+  - https://github.com/localhostcnc/reviewList-ak  
+  - https://github.com/localhostcnc/calendar-component-kt  
+  - https://github.com/localhostcnc/booking-info-service-jeff  
 
 ## Table of Contents
 
@@ -16,18 +15,20 @@
 1. [Development](#development)
 
 ## Usage
-
-> Server: npm start (nodemon)
-> Webpack: npm run webpack
-> Database: 1) brew install postgresql (Install postgres)
-            2) brew services start postgresql (Start postgres)
-            3) createdb listing_info (Create DB)
-            4) psql listing_info (Use DB)
-            5) \i /Users/connorhoman/Desktop/listinginfo/database/db_create.sql {substitute w/ your file path} (Create Table)
-            6) (Change credentials in /database/seed.js & /database/seed.js to yours)
-            7) Get API key from Connor
-            7) npm run seed (Seeds DB)
-
+```sh
+> Server: npm start (nodemon)  
+> Webpack: npm run webpack  
+> Database: 1) brew install postgresql (Install postgres)  
+            2) brew services start postgresql (Start postgres)  
+            3) createdb listing_info (Create DB)  
+            4) psql listing_info (Use DB)  
+              Within psql shell:  
+              5) \i {substitute w/ your file path to db_create.sql} (Create Table)  
+              6) ALTER USER {your_username} WITH PASSWORD {your_password}  
+            7) (Change credentials in /database/seed.js & /database/seed.js to your postgres credentials from step 6)  
+            8) Get API key from Connor (in slack)  
+            9) npm run seed (Seeds DB)  
+```
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
