@@ -24,9 +24,9 @@
             4) psql listing_info (Use DB)  
               Within psql shell:  
               5) \i {substitute w/ your file path to db_create.sql} (Create Table)  
-              6) ALTER USER {your_username} WITH PASSWORD {your_password}  
-            7) (Change credentials in /database/seed.js & /database/seed.js to your postgres credentials from step 6)  
-            8) Get API key from Connor (in slack)  
+              6) Optional: (can use w/o username/password) ALTER USER {your_username} WITH PASSWORD {your_password}  
+            7) Remove credentials in /database/seed.js & /database/seed.js, or use your postgres credentials from step 6
+            8) Get API key from Connor (in slack), input then change api.example.js to api.jsx
             9) npm run seed (Seeds DB)  
 ```
 ## Requirements

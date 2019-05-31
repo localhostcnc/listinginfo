@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "webpack": "webpack -d --watch",
     "seed": "node database/seed.js",
     "test": "jest --coverage"
@@ -24,6 +24,7 @@
     "axios": "^0.18.0",
     "bluebird": "^3.5.4",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "express": "^4.16.4",

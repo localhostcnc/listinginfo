@@ -135,6 +135,7 @@ class OwnerInfo extends React.Component {
   render() {
     return (
       <div>
+        <Line />
         <Floater>
           <Avatar src={this.state.avatar} alt="avatar of owner" />
         </Floater>

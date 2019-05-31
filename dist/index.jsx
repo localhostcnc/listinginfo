@@ -13,6 +13,13 @@ const Column = styled.div`
   padding-left: 189px;
   font-family: Montserrat, sans-serif;
 `;
+const Index1 = styled.div`
+  z-index: 1;
+`;
+const Index2 = styled.div`
+  margin-top: 600px;
+  margin-bottom: -800px;
+`;
 
 class ListingInfo extends React.Component {
   constructor(props) {
@@ -23,8 +30,12 @@ class ListingInfo extends React.Component {
     return (
       <div>
         <Column>
-          <UpperInfo />
-          <LowerInfo />
+          <Index1>
+            <UpperInfo />
+          </Index1>
+          <Index2>
+            <LowerInfo />
+          </Index2>
         </Column>
       </div>
     );
@@ -32,3 +43,4 @@ class ListingInfo extends React.Component {
 }
 
 ReactDOM.render(<ListingInfo />, document.getElementById('listingInfo'));
+export default ListingInfo;
