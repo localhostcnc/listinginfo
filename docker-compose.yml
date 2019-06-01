@@ -11,15 +11,17 @@ services:
       POSTGRES_PASSWORD: connorhoman
       POSTGRES_DB: listinginfo
       POSTGRES_USER: connorhoman
-    networks:
-      - listinginfo
+    network_mode: 'host'
 
   listing:
     build: .
+    environment: 
+      - 'DB_HOST= postgres'
+      - 'DB_PORT= 5432'
+      - 'DB_DATABASE= listing_info'
     ports: 
       - '3006:3006'
     depends_on:
       - 'postgres'
-    networks:
-      - listinginfo
+    network_mode: 'host'
           
