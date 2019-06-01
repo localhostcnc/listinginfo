@@ -1,5 +1,10 @@
 version: '3'
 
+networks: 
+  mynet:
+    external: true
+    attachable: true
+
 services:
   postgres:
     build: ./database/
@@ -7,6 +12,9 @@ services:
       POSTGRES_PASSWORD: connorhoman
       POSTGRES_DB: listinginfo
       POSTGRES_USER: connorhoman
+    networks:
+      - mynet
+      - default
 
   listing:
     build: .
@@ -14,4 +22,7 @@ services:
       - '3006:3006'
     depends_on:
       - 'postgres'
+    networks:
+      - mynet
+      - default
           
