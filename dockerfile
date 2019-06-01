@@ -1,4 +1,4 @@
-FROM node:7.6-alpine
+FROM node:10.15-alpine
 
 RUN mkdir -p /src/app
 
@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE 3006
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "docker" ]

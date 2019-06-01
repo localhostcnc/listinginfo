@@ -1,0 +1,7 @@
+FROM postgres:11
+
+RUN mkdir -p /docker-entrypoint-initdb.d
+
+COPY ./db_create.sql /docker-entrypoint-initdb.d/db_create.sql
+
+EXPOSE 5432

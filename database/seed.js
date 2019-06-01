@@ -4,9 +4,10 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   user: 'connorhoman',
-  host: 'postgres://database/listing_info',
-  database: 'listing_info',
+  host: '172.19.0.2',
+  database: 'listinginfo',
   password: 'connorhoman',
+  port: 5432,
 });
 
 const names = ['Lake Almanor Lake Front Retreat',

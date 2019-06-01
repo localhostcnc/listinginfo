@@ -1,12 +1,17 @@
 version: '3'
 
 services:
+  postgres:
+    build: ./database/
+    environment: 
+      POSTGRES_PASSWORD: connorhoman
+      POSTGRES_DB: listinginfo
+      POSTGRES_USER: connorhoman
+
   listing:
-    build: ./
-    depends_on:
-      - 'database'
+    build: .
     ports: 
       - '3006:3006'
-
-  database:
-    image: postgres:latest
+    depends_on:
+      - 'postgres'
+          
