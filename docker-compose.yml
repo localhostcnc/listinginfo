@@ -11,7 +11,9 @@ services:
       POSTGRES_PASSWORD: connorhoman
       POSTGRES_DB: listinginfo
       POSTGRES_USER: connorhoman
-    network_mode: 'host'
+    networks:
+      inner:
+        alias: postgres
 
   listing:
     build: .
@@ -21,7 +23,19 @@ services:
       - 'DB_DATABASE= listing_info'
     ports: 
       - '3006:3006'
-    depends_on:
-      - 'postgres'
-    network_mode: 'host'
+    networks:
+      inner:
+        alias: server
+
+  networks:
+    inner:
+      driver: bridge
+      driver_opts:
+        com.docker.network.enable_ipv6: "true"
+        com.docker.network.bridge.enable_ip_masquerade: "true"
+      ipam:
+        driver: default
+        config:
+        - subnet: 172.16.100.0/24
+        - gateway: 172.16.100.1
           
