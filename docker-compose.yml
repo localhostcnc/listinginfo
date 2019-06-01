@@ -1,8 +1,8 @@
 version: '3'
 
 networks: 
-  mynet:
-    external: true
+  listinginfo:
+    attachable: true
 
 services:
   postgres:
@@ -12,8 +12,7 @@ services:
       POSTGRES_DB: listinginfo
       POSTGRES_USER: connorhoman
     networks:
-      - mynet
-      - default
+      - listinginfo
 
   listing:
     build: .
@@ -22,6 +21,5 @@ services:
     depends_on:
       - 'postgres'
     networks:
-      - mynet
-      - default
+      - listinginfo
           
