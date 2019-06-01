@@ -12,28 +12,16 @@ services:
       POSTGRES_DB: listinginfo
       POSTGRES_USER: connorhoman
     networks:
-
-        alias: postgres
+      listinginfo:
 
   listing:
     build: .
     environment: 
       - 'DB_HOST= postgres'
       - 'DB_PORT= 5432'
-      - 'DB_DATABASE= listing_info'
+      - 'DB_DATABASE= listinginfo'
     ports: 
       - '3006:3006'
     networks:
-      alias: server
-
-  networks:
-      driver: bridge
-      driver_opts:
-        com.docker.network.enable_ipv6: "true"
-        com.docker.network.bridge.enable_ip_masquerade: "true"
-      ipam:
-        driver: default
-        config:
-        - subnet: 172.16.100.0/24
-        - gateway: 172.16.100.1
+      listinginfo:
           
