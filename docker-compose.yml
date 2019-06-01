@@ -16,12 +16,16 @@ services:
 
   listing:
     build: .
+    links: 
+      - 'postgres'
     environment: 
       - 'DB_HOST= postgres'
       - 'DB_PORT= 5432'
       - 'DB_DATABASE= listinginfo'
     ports: 
       - '3006:3006'
+    depends_on: 
+      - 'postgres'
     networks:
       listinginfo:
           
