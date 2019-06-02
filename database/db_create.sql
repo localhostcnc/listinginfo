@@ -1,3 +1,5 @@
+CREATE DATABASE listing_info;
+USE listing_info;
 CREATE TABLE listing_info(
   listing_id serial PRIMARY KEY,
   name TEXT NOT NULL,
