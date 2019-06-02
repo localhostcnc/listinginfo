@@ -7,7 +7,6 @@ const pool = new Pool({
   host: 'postgres',
   database: 'listinginfo',
   password: 'connorhoman',
-  port: 5432,
 });
 
 const names = ['Lake Almanor Lake Front Retreat',
