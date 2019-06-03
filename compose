@@ -4,6 +4,6 @@
 docker network create revnet
 docker build -t database ./database
 docker build -t listing . 
-docker run -d -e POSTGRES_USER=connorhoman -e POSTGRES_PASSWORD=connorhoman -e POSTGRES_DATABASE=listing_info --name postgres --network revnet database
+docker run -d -e POSTGRES_USER=connorhoman -e POSTGRES_PASSWORD=connorhoman -e POSTGRES_DB=listing_info --name postgres --network revnet database
 sleep 5
 docker run -d -p 3006:3006 --name listing --network revnet listing
